@@ -142,8 +142,8 @@ You will then be logged in a coreOS instance which runs docker.
 
 To test docker, just pull an nginx container image from dockerhub and run it:
 
-    $ docker pull dockerfile/nginx
-    $ docker run -p 80:80 -d dockerfile/nginx
+    $ docker pull nginx
+    $ docker run -p 80:80 -d nginx
 
 Using cloud-config
 ------------------
@@ -171,8 +171,8 @@ Head back to the UI, start a coreOS instance and paste the following in the User
 
             [Service]
             TimeoutStartSec=0
-            ExecStartPre=/usr/bin/docker pull dockerfile/elasticsearch
-            ExecStart=/usr/bin/docker run -d -p 9200:9200 -p 9300:9300 dockerfile/elasticsearch
+            ExecStartPre=/usr/bin/docker pull elasticsearch
+            ExecStart=/usr/bin/docker run -d -p 9200:9200 -p 9300:9300 elasticsearch
 
 Like so:
 
